@@ -1,9 +1,11 @@
 import './TeamSection.css';
+import chefImageA from './assets/chefs-mario-and-adrian_a.jpg';
+import chefImageB from './assets/chefs-mario-and-adrian_b.jpg';
 
 const TeamSection = () => {
   const teamMembers = [
-    { name: 'John Doe', role: 'Head Chef', img: './assets/chefs-mario-and-adrian_a.jpg' },
-    { name: 'Jane Smith', role: 'Restaurant Manager', img: './assets/chefs-mario-and-adrian_b.jpg' },
+    { name: 'John Doe', role: 'Head Chef', img: chefImageA },
+    { name: 'Jane Smith', role: 'Restaurant Manager', img: chefImageB },
   ];
 
   return (
