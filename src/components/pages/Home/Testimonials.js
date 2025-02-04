@@ -5,46 +5,45 @@ import customer4Image from './assets/customer4.jpg';
 import './Testimonials.css';
 import TestimonialCard from './TestimonialCard';
 
+// Customer data moved outside to prevent unnecessary re-renders
 const customers = [
   {
     fullName: 'Maria Sanchez',
     image: customer1Image,
     rating: [1, 1, 1, 1, 0.5],
-    says: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-      eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+    says: `Amazing food and great service! Will definitely come back.`,
   },
   {
     fullName: 'Antony Clifton',
     image: customer2Image,
     rating: [1, 1, 1, 1, 1],
-    says: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-      eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+    says: `Best experience ever! The flavors were incredible.`,
   },
   {
     fullName: 'Tamika Jackson',
     image: customer3Image,
     rating: [1, 1, 1, 1, 0.5],
-    says: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-      eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+    says: `Lovely ambiance and delicious food! Highly recommend.`,
   },
   {
     fullName: 'Brandon Ming',
     image: customer4Image,
     rating: [1, 1, 1, 1],
-    says: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-      eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+    says: `Great value for money! The dishes are well-prepared and tasty.`,
   },
 ];
 
 const Testimonials = () => {
   return (
     <section className="testimonials">
-      <div className="container grid">
-        <h2>What people say about us!</h2>
-        {customers.map((customer, index) => 
-          <TestimonialCard key={index} customer={customer} />
-        )}
-     </div>
+      <div className="container">
+        <h2>What People Say About Us</h2>
+        <div className="grid">
+          {customers.map((customer, index) => (
+            <TestimonialCard key={index} customer={customer} />
+          ))}
+        </div>
+      </div>
     </section>
   );
 };

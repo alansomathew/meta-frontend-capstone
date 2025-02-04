@@ -6,13 +6,14 @@ import './WeekSpecials.css';
 import pages from '../../../utils/pages';
 import MealCard from './MealCard';
 
+// Moved meal data outside to avoid unnecessary re-renders
 const meals = [
   {
     name: 'Greek Salad',
     image: greekSaladImage,
     price: '$12.99',
-    description: `The famous greek salad of crispy lettuce, peppers, olives and 
-      our Chicago style feta cheese, garnished with crunchy garlic and rosemary 
+    description: `The famous Greek salad with crispy lettuce, peppers, olives, and 
+      our Chicago-style feta cheese, garnished with crunchy garlic and rosemary 
       croutons.`,
   },
   {
@@ -26,23 +27,23 @@ const meals = [
     name: 'Lemon Dessert',
     image: lemonDessertImage,
     price: '$5.00',
-    description: `This comes straight from grandma's recipe book, every last 
-      ingredient has been sourced and is as authentic as can be imagined.`,
+    description: `Straight from grandma's recipe book, every last ingredient 
+      has been sourced to be as authentic as can be imagined.`,
   },
 ];
 
 const WeekSpecials = () => {
   return (
     <section className="container grid week-specials">
-      <div className="week-specials-header">
-        <h2>This week specials!</h2>
-        <Link className="button-primary" to={pages.get('orderOnline').path}>
-          Online Menu
+      <header className="week-specials-header">
+        <h2>This Week's Specials</h2>
+        <Link className="button-primary" to={pages.orderOnline.path}>
+          View Menu
         </Link>
-      </div>
-      {meals.map((meal, index) => 
+      </header>
+      {meals.map((meal, index) => (
         <MealCard key={index} meal={meal} />
-      )}
+      ))}
     </section>
   );
 };

@@ -9,24 +9,22 @@ const OurStory = () => {
         <h1>Little Lemon</h1>
         <h2>Chicago</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-          culpa qui officia deserunt mollit anim id est laborum. Sed ut 
-          perspiciatis unde omnis iste natus error sit voluptatem accusantium 
-          doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo 
-          inventore veritatis et quasi architecto beatae vitae dicta sunt 
-          explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut 
-          odit aut fugit, sed quia consequuntur magni dolores eos qui ratione 
-          voluptatem sequi nesciunt.
+          Founded in the heart of Chicago, Little Lemon is a family-owned 
+          Mediterranean restaurant that brings authentic flavors to your table. 
+          Our head chefs, Mario and Adrian, blend traditional recipes with a 
+          modern twist, ensuring every dish is a perfect balance of taste and 
+          innovation.
+        </p>
+        <p>
+          From our freshly sourced ingredients to our handcrafted desserts, 
+          every bite tells a story of passion, culture, and dedication. Whether 
+          you're here for a casual lunch or a special occasion, we promise an 
+          unforgettable dining experience.
         </p>
       </div>
       <div className="our-story-chefs">
-        <img src={chefsMarioAndAdrianAImage} alt="Chefs Mario and Adrian" />
-        <img src={chefsMarioAndAdrianBImage} alt="Chefs Mario and Adrian" />
+        <img src={chefsMarioAndAdrianAImage} alt="Chefs Mario and Adrian" loading='lazy' />
+        <img src={chefsMarioAndAdrianBImage} alt="Chefs Mario and Adrian" loading='lazy' />
       </div>
     </section>
   );

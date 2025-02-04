@@ -3,63 +3,76 @@
   background-color: #495E57;
 }
 
+/* Grid Layout */
 .hero .container {
+  display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
   gap: 3.5rem;
   margin-bottom: 9.375rem;
 }
 
-.hero-information {
-  grid-column: 1;
-}
-
+/* Left Side - Text Content */
 .hero-information h1 {
   color: #F4CE14;
+  font-size: 3.5rem;
 }
 
 .hero-information h2 {
   color: #FFFFFF;
+  font-size: 2.5rem;
 }
 
 .hero-information p {
   margin-top: 1.5rem;
   color: #FFFFFF;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
+/* CTA Button */
 .hero-information .button-primary {
   display: inline-block;
   margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  background-color: #F4CE14;
+  color: #495E57;
+  font-weight: bold;
+  border: 0.1875rem solid #F4CE14;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .hero-information .button-primary:hover, 
 .hero-information .button-primary:focus {
+  background-color: #495E57;
   border-color: #F4CE14;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
 }
 
+/* Right Side - Image */
 .hero-image {
-  grid-column: 2;
   width: 100%;
-  height: 24rem;
+  max-width: 500px;
+  height: auto;
   margin-bottom: -4.375rem;
-  justify-self: end;
   border-radius: 1rem;
   object-fit: cover;
 }
 
-/*-- Media queries ------------------------------------------------------*/
-
+/* Responsive Adjustments */
 @media (max-width: 792px) {
-.hero .container {
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
-}
+  .hero .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 
-.hero-information {
-  grid-row: 1;
-}
-
-.hero-image {
-  grid-column: 1;
-  grid-row: 2;
-}
+  .hero-image {
+    margin-top: 2rem;
+    max-width: 100%;
+    height: auto;
+  }
 }

@@ -1,0 +1,10 @@
+.about-content {
+    padding: 2rem;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+  }
+  .about-content h2 {
+    color: #495E57;
+  }
+  

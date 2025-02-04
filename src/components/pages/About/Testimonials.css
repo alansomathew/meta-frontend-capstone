@@ -1,0 +1,16 @@
+.testimonials {
+    text-align: center;
+    padding: 2rem;
+  }
+  .reviews {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .review-card {
+    background: #FFF;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  }
+  

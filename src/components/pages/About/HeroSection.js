@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import restaurantFoodImage from './assets/restaurant-food.jpg'; // Corrected import path
-import './Hero.css';
+import restaurantFoodImage from './assets/restaurant-food.jpg';
+import './HeroSection.css';
 import pages from '../../../utils/pages';
 
-const Hero = () => {
+const HeroSection = () => {
   return (
     <header className="hero">
       <div className="container grid">
@@ -11,8 +11,9 @@ const Hero = () => {
           <h1>Little Lemon</h1>
           <h2>Chicago</h2>
           <p>
-            We are a family-owned Mediterranean restaurant, 
-            focused on traditional recipes served with a modern twist.
+          Founded in 1995, Little Lemon has been serving authentic Mediterranean
+        dishes crafted with the freshest ingredients. Our chefs bring decades
+        of experience to your plate, ensuring a delightful dining experience.
           </p>
           <Link 
             className="button-primary" 
@@ -32,4 +33,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroSection;
