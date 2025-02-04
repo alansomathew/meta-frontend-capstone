@@ -18,7 +18,8 @@
 
 .hero h1 {
   font-size: 3rem;
-  color: #495E57;
+  color: #F4CE14; /* Vibrant lemon yellow */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for readability */
 }
 
 .hero h2 {

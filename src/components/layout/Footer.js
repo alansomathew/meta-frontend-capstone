@@ -10,7 +10,7 @@ import {
   faPhone
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Footer.css';
 import logoWhiteImage from './assets/logo-white.png';
 import pages from '../../utils/pages';
@@ -31,6 +31,7 @@ const socials = [
 const navLinks = Object.values(pages).filter(page => page.anchorable !== false);
 
 const Footer = () => {
+  const { pathname } = useLocation();
   return (
     <footer className="site-footer">
       <div className="container grid">
@@ -39,9 +40,14 @@ const Footer = () => {
           <h4>Sitemap</h4>
           <ul>
             {navLinks.map((navLink, index) => 
-              <li key={index}>
-                <Link to={navLink.path}>{navLink.name}</Link>
-              </li>
+                        <li key={index}>
+                          <Link 
+                            className={pathname === navLink.path ? 'active' : ''} 
+                            to={navLink.path}
+                          >
+                            {navLink.name}
+                          </Link>
+                        </li>
             )}
           </ul>
         </nav>
